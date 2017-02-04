@@ -10,6 +10,10 @@ protected:
 public:
 	Person(string,int);//Constructor que asignara el String Nombre y int Edad
 	~Person();
+	string getName();
+	void setName(string);
+	int getAge();
+	void setAge(int);
 	virtual string toString() const;//toString que imprimira toda la informacion de la Persona
 	virtual bool equals(Object*);//Equals que comparara si un "Objeto"  es una Persona (sea de la clase persona) 
 	

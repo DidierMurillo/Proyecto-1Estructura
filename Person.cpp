@@ -24,3 +24,19 @@ bool Person::equals(Object* Other){//Compara si el "Objeto" es una Persona
 	Person* TemporalPersona=dynamic_cast<Person*>(Other);
 	return TemporalPersona->name==name;
 }
+
+string Person::getName(){
+	return this->name;
+}
+
+int Person::getAge(){
+	return this->age;
+}
+
+void Person::setName(string name){
+	this->name=name;
+}
+
+void Person::setAge(int age){
+	this->age=age;
+}

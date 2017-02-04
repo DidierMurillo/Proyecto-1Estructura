@@ -20,7 +20,7 @@ public:
 
 private:
 	int currentcapacity;//
-	int delta;//El el tamaño que aumentara la lista al estar llena y tenga que aumentar 
+	int delta;//El el tamaño que aumentara la lista al estar llena 
 	void resize();//El metodo que incrementara la capacidad de la lista 
 	Object** array;
 };

@@ -71,21 +71,23 @@ VSArrayList::~VSArrayList(){//Destructor de VSArrayList
 Object* VSArrayList::remove(int p){//Remueve un objeto en una posicion dada por el usuario(El size no decremena) mientras la posicion sea validad
 	if (p<0||p>size)
 	{
-		cout<<"El tamaño que ingreso no fue valido ---->explode()";
 		return NULL;
-	}
-	Object* e=array[p];
-	array[p]=NULL;
-	return e;
+	}else{
+		Object* e=array[p];
+		array[p]=NULL;
+		return e;
+	}	
 	
 }
 
 Object* VSArrayList::get(int p){//Regresa la referencia del "objeto" en una posicion dada por el usuario mientras la posicion sea validad
-	if(p<0||p>size){
-		cout<<"El tamaño que ingreso no fue valido ---->explode()";
+	if (p<0||p>size)
+	{
 		return NULL;
+	}else{
+		return array[p];
+
 	}
-	return array[p];
 }
 
 Object* VSArrayList::first()const{//Regresa refeferencia del primer objeto que se encuentra en la lista
@@ -96,12 +98,12 @@ Object* VSArrayList::last(){//Regresa referencia del ultimo objeto que se encuen
 	return array[size-1];	
 }
 
-void VSArrayList::clear(){//Elimina el contenido de cada posicion de la lista y borra la lista como tal
+void VSArrayList::clear(){//Elimina el contenido de cada posicion de la lista 
 	for (int i = 0; i < size; ++i)
 	{
 		if (array[i])
 		{
-			delete array[i];
+			//delete array[i];
 			array[i]=NULL;
 		}
 	}
